@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spy Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon  -->
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+</head>
+<body>
+
+<div class="screen setup-screen" id="setupScreen">
+  <div class="panel">
+
+    <h1>🕵️ SPY GAME</h1>
+
+    <div class="selector">
+      <p>Igrači</p>
+      <div class="counter">
+        <button onclick="changePlayers(-1)">−</button>
+        <span id="players">5</span>
+        <button onclick="changePlayers(1)">+</button>
+      </div>
+    </div>
+
+    <div class="selector">
+      <p>Špijuni</p>
+      <div class="counter">
+        <button onclick="changeSpies(-1)">−</button>
+        <span id="spies">1</span>
+        <button onclick="changeSpies(1)">+</button>
+      </div>
+    </div>
+
+    <button class="start" onclick="startGame()">Start</button>
+
+  </div>
+</div>
+
+
+<div class="screen game-screen hidden" id="gameScreen">
+
+  <div class="overlay" id="overlay"></div>
+
+  <h2 id="turnText"></h2>
+
+  <div class="card-wrapper">
+    <div class="card" id="card" onclick="flipCard()">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          Klikni da vidiš karticu
+        </div>
+        <div class="card-face card-back" id="cardText"></div>
+      </div>
+    </div>
+  </div>
+
+  <button id="restartBtn" class="restart hidden" onclick="resetGame()">
+    Restart
+  </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
