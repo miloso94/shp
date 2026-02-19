@@ -6,34 +6,43 @@ let flipped = false;
 let usedWords = [];
 
 const words = [
-
-  // Priroda
   "Šuma", "More", "Planina", "Reka", "Pustinja", "Mesec", "Sunce", "Zvezda",
-  "Okean", "Pećina", "Vodopad", "Oluja", "Sneg", "Džungla", "Glečer",
-
-  // Gradovi / mesta
-  "Pariz", "Beograd", "Njujork", "Tokio", "Rim", "London", "Berlin",
-
-  // Predmeti
-  "Telefon", "Laptop", "Automobil", "Avion", "Brod", "Knjiga",
-  "Naočare", "Televizor", "Sat", "Fotoaparat",
-
-  // Zanimanja
+  "Okean", "Pećina", "Vodopad", "Sneg", "Džungla", "Glečer", "Zaliv",
+  "Pariz", "Njujork", "Tokio", "Rim", "Berlin", "Fotoaparat", "Sok",
+  "Telefon", "Laptop", "Automobil", "Avion", "Knjiga", "Naočare", "Televizor", 
   "Doktor", "Pilot", "Glumac", "Profesor", "Fudbaler", "Policajac",
-
-  // Likovi iz filmova / knjiga
-  "Dart Vejder",
-  "Betmen",
-  "Hari Poter",
-  "Spajdermen",
-
-  // Životinje
-  "Lav", "Tigar", "Ajkula", "Delfin", "Orao", "Vuk",
-
-  // Hrana
-  "Pizza", "Hamburger", "Sarma", "Čokolada", "Sladoled"
+  "Dart Vejder", "Betmen", "Hari Poter", "Spajdermen", "Gitara", "Zamak",
+  "Lav", "Tigar", "Ajkula", "Orao", "Vuk", "Bajka", "Crtež", "Biblioteka", 
+  "Pizza", "Hamburger", "Sarma", "Čokolada", "Sladoled", "Trotinet",
+  "Oblak", "Magla", "Vetar", "Grom", "Munja", "Duga", "Kometa", "Zemljotres", 
+  "Vulkan", "Jezero", "Livada", "Lednik", "Zaliv", "Toranj", "Sat", 
+  "Most", "Tunel", "Aerodrom", "Stadion", "Pozorište", "Muzej", 
+  "Bolnica", "Fabrika", "Luka", "Metro", "Tržni centar", "Katedrala",  
+  "Kišobran", "Kofer", "Ranac", "Sveća", "Ogledalo", "Ključ", "Novčanik", 
+  "Klavir", "Bubanj", "Mikrofon", "Kamera", "Šešir", "Rukavice", "Ćebe",
+  "Internet", "Robot", "Dron", "Satelit", "Tastatura", "Miš", "Punjač",
+  "Novinar", "Vatrogasac", "Sudija", "Kuvar", "Frizer", "Arhitekta", "Programer", 
+  "Vozač", "Pekar", "Fotograf", "Odbojka", "Rukomet", "Bejzbol", "Hleb",
+  "Košarka", "Tenis", "Plivanje", "Boks", "Skijanje", "Maraton", "Biciklizam", 
+  "Palačinka", "Sendvič", "Supa", "Torta", "Kafa", "Čaj", "Voda", "Mleko", 
+  "Medved", "Zebra", "Žirafa", "Pingvin", "Papagaj", "Soko", "Kornjača", "Zmija",
+  "Motor", "Traktor", "Helikopter", "Raketa", "Podmornica", "Voz", "Kamion", 
+  "Jakna", "Majica", "Pantalone", "Haljina", "Patike", "Čizme", "Kaiš", "Kravata",
+  "Film", "Serija", "Pesma", "Album", "Koncert", "Festival", "Strip", "Roman", 
+  "Tabla", "Sveska", "Olovka", "Hemijska", "Učionica", "Diploma", "Ispit",
+  "Proleće", "Leto", "Jesen", "Zima", "Ponedeljak", "Subota", "Nedelja",
+  "Rođendan", "Venčanje", "Takmičenje", "Parada", "Karneval", "Kompjuter",
+  "Baterija", "Lanac", "Peškir", "Saputnik", "Mapa", "Pasoš", "Kalendar", 
+  "Kovčeg", "Fontana", "Stepenice", "Kapija", "Čamac", "Balon", "Svetionik", 
+  "Karton", "Plakat", "Zastava", "Pečat", "Sir",  "Med", "Džem", "Kamp",
+  "Novak Đoković", "Nikola Tesla", "Nikola Jokić", "Emir Kusturica", "Milena Dravić",
+  "Lionel Messi", "Michael Jordan", "Albert Einstein", "Bill Gates",
+  "Ivo Andrić", "Vlade Divac", "Ana Ivanović", "Željko Joksimović", "Zdravko Čolić",
+  "Nataša Bekvalac", "Đorđe Balašević", "Svetlana Bojković", "Bora Đorđević",
+  "Miloš Biković", "Marija Šerifović", "Dušan Tadić", "Ivana Španović", "Mihajlo Pupin",
+  "Cristiano Ronaldo", "LeBron James", "Tom Cruise", "Leonardo DiCaprio",
+  "Angelina Jolie", "Elon Musk", "Mark Zuckerberg", "Oprah Winfrey", "Brad Pitt"
 ];
-
 
 function changePlayers(val) {
   players += val;
@@ -93,7 +102,6 @@ function generateRoles() {
   }
 }
 
-
 function flipCard() {
   const card = document.getElementById("card");
   const cardText = document.getElementById("cardText");
@@ -136,7 +144,6 @@ function flipCard() {
     }, 300);
   }
 }
-
 
 function updateTurnText() {
   document.getElementById("turnText").innerText =
